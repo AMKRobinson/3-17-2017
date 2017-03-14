@@ -4,6 +4,8 @@ var storeHours = ['6am','7am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm'
 
 var body = document.getElementsByTagName('body')[0];
 
+var storeName = [];
+
 function store(name, minCust, maxCust, avgCookie) {
   this.name = name;
   this.minCust = minCust;
@@ -22,18 +24,24 @@ function store(name, minCust, maxCust, avgCookie) {
     }
     this.salesArray.push(total);
   };
-  this.createListItems = function(){
-    this.cookieSales();
-    var newHeading = document.createElement('h2');
-    body.appendChild(newHeading);
-    newHeading.innerText = this.name;
-    var newUL = document.createElement('ul');
-    for (var i = 0; i < storeHours.length; i++) {
-      var newLI = document.createElement('li');
-      newLI.innerText = storeHours[i] + ': ' + this.salesArray[i] + ' cookies';
-      newUL.appendChild(newLI);
+  this.createTable = function() {
+    var newTable = document.createElement('table');
+    body.appendChild(newTable);
+    var newThead = document.createElement('thead');
+    newTable.appendChild(newThead);
+    for (var i = 0; i < storehours.length; i++){
+     var tr = document.createElement('tr');
+     newThread.appendChild(tr);
+   }
+
+
+    // newHeading.innerText = this.name;
+    // var newTable = document.createElement('table');
+    // for (var i = 0; i < storeHours.length; i++) {
+    //   var newTR = document.createElement('tr');
+    //   newTable.appendChild(newTR);
     }
-    body.appendChild(newUL);
+    body.appendChild(newTable);
   };
 };
 
@@ -42,6 +50,12 @@ var sTac = new store('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new store('Seattle Center', 11, 38, 3.7);
 var capHill = new store('Capitol Hill', 20, 38, 2.3);
 var alKi = new store('Alki', 2, 16, 4.6);
+
+firsAndPike.createListItems();
+sTac.createListItems();
+seattleCenter.createListItems();
+capHill.createListItems();
+alKi.createListItems();
 // var sTacAir = {
 //   minCust: 3,
 //   maxCust: 24,
