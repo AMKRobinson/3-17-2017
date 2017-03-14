@@ -13,86 +13,89 @@ var firstAndPike = {
   cookieSales: function() {
     var sales = [];
     for (var i = 0; i < storehours.length; i++) {
-      var salesPerhour = this.randCust() * this.avgCookie;
+      var salesPerhour = Math.floor(this.randCust() * this.avgCookie);
       sales.push(salesPerhour);
-      console.log('Console log of i:' + i);
+      // console.log('sales numbers array' + sales);
     }
+    this.sales = sales;
     return sales;
   }
 };
 
-var seaTacAirport = {
-  minCust: 3,
-  maxCust: 24,
-  avgCookie: 1.2,
-  randCust: function() {
-    console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
-  },
-  cookieSales: function() {
-    var sales = [];
-    for (var i = 0; i < storehours.length; i++) {
-      var salesPerhour = this.randCust() * this.avgCookie;
-      sales.push(salesPerhour);
-      console.log('Console log of i:' + i);
-    }
-    return sales;
-  }
-};
+firstAndPike;
 
-var seattleCenter = {
-  minCust: 11,
-  maxCust: 38,
-  avgCookie: 3.7,
-  randCust: function() {
-    console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
-  },
-  cookieSales: function() {
-    var sales = [];
-    for (var i = 0; i < storehours.length; i++) {
-      var salesPerhour = this.randCust() * this.avgCookie;
-      sales.push(salesPerhour);
-      console.log('Console log of i:' + i);
-    }
-    return sales;
-  }
-};
-
-var capitolHill = {
-  minCust: 20,
-  maxCust: 38,
-  avgCookie: 2.3,
-  randCust: function() {
-    console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
-  },
-  cookieSales: function() {
-    var sales = [];
-    for (var i = 0; i < storehours.length; i++) {
-      var salesPerhour = this.randCust() * this.avgCookie;
-      sales.push(salesPerhour);
-      console.log('Console log of i:' + i);
-    }
-    return sales;
-  }
-};
-
-var alki = {
-  minCust: 2,
-  maxCust: 16,
-  avgCookie: 4.6,
-  randCust: function() {
-    console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
-  },
-  cookieSales: function() {
-    var sales = [];
-    for (var i = 0; i < storehours.length; i++) {
-      var salesPerhour = this.randCust() * this.avgCookie;
-      sales.push(salesPerhour);
-      console.log('Console log of i:' + i);
-    }
-    return sales;
-  }
-};
+// var seaTacAirport = {
+//   minCust: 3,
+//   maxCust: 24,
+//   avgCookie: 1.2,
+//   randCust: function() {
+//     console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+//     return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
+//   },
+//   cookieSales: function() {
+//     var sales = [];
+//     for (var i = 0; i < storehours.length; i++) {
+//       var salesPerhour = this.randCust() * this.avgCookie;
+//       sales.push(salesPerhour);
+//       console.log('Console log of i:' + i);
+//     }
+//     return sales;
+//   }
+// };
+//
+// var seattleCenter = {
+//   minCust: 11,
+//   maxCust: 38,
+//   avgCookie: 3.7,
+//   randCust: function() {
+//     console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+//     return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
+//   },
+//   cookieSales: function() {
+//     var sales = [];
+//     for (var i = 0; i < storehours.length; i++) {
+//       var salesPerhour = this.randCust() * this.avgCookie;
+//       sales.push(salesPerhour);
+//       console.log('Console log of i:' + i);
+//     }
+//     return sales;
+//   }
+// };
+//
+// var capitolHill = {
+//   minCust: 20,
+//   maxCust: 38,
+//   avgCookie: 2.3,
+//   randCust: function() {
+//     console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+//     return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
+//   },
+//   cookieSales: function() {
+//     var sales = [];
+//     for (var i = 0; i < storehours.length; i++) {
+//       var salesPerhour = this.randCust() * this.avgCookie;
+//       sales.push(salesPerhour);
+//       console.log('Console log of i:' + i);
+//     }
+//     return sales;
+//   }
+// };
+//
+// var alki = {
+//   minCust: 2,
+//   maxCust: 16,
+//   avgCookie: 4.6,
+//   randCust: function() {
+//     console.log (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+//     return Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
+//   },
+//   cookieSales: function() {
+//     var sales = [];
+//     for (var i = 0; i < storehours.length; i++) {
+//       var salesPerhour = this.randCust() * this.avgCookie;
+//       sales.push(salesPerhour);
+//       console.log('Console log of i:' + i);
+//     }
+//     return sales;
+//   }
+// };
