@@ -9,6 +9,16 @@ var sTac = new Cookiestore('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new Cookiestore('Seattle Center', 11, 38, 3.7);
 var capHill = new Cookiestore('Capitol Hill', 20, 38, 2.3);
 var alKi = new Cookiestore('Alki', 2, 16, 4.6);
+var newStore = new Cookiestore();
+
+var form = document.getElementsById('the-form');
+function newStore(){
+  event.preventDefault();
+  var name = event.target.name;
+  var minCust = event.target.minCust;
+  var maxCust = event.target.maxCust;
+  var avgCookie = event.target.avgCookie;
+};
 
 function Cookiestore(name, minCust, maxCust, avgCookie) {
   this.name = name;
@@ -43,7 +53,7 @@ function Cookiestore(name, minCust, maxCust, avgCookie) {
     }
   };
   allStores.push(this);
-}
+};
 
 function createTable() {
   var table = document.createElement('table');

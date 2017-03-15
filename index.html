@@ -5,25 +5,20 @@
     <title></title>
   </head>
   <body>
-    <form action="index.html" method="get">
-      <ul>
-        <li>
+    <form action="index.html" method="get" id="the-form">
+      <fieldset>
           <label for="name">store name:</label>
-          <input type="text" placeholder="your store name" value="">
-        </li>
-        <li>
+          <input type="text" placeholder="your store name" value="" name="name">
+          <br>
           <label for="minCust">minimum customers:</label>
-          <input type="text" placeholder="number value" value="">
-        </li>
-        <li>
+          <input type="text" placeholder="number value" value="" name="minCust">
+          <br>
           <label for="maxCust">maximum customers:</label>
-          <input type="text" placeholder="number value" value="">
-        </li>
-        <li>
+          <input type="text" placeholder="number value" value="" name="maxCust">
+          <br>
           <label for="avgCookie">average cookie sales:</label>
-          <input type="text" placeholder="number value" value="">
-        </li>
-      <ul>
+          <input type="text" placeholder="number value" value="" name="avgCookie">
+      </fieldset>
     </form>
   <script src="app.js"></script>
   </body>
