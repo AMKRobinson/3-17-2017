@@ -3,6 +3,7 @@
 var storeHours = ['6am','7am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm','total'];
 
 var body = document.getElementsByTagName('body')[0];
+var table = document.getElementsByTagName('table')[0];
 
 var storeName = [];
 
@@ -23,26 +24,20 @@ function store(name, minCust, maxCust, avgCookie) {
       total += salesPerhour;
     }
     this.salesArray.push(total);
-  };
-  this.createTable = function() {
-    var newTable = document.createElement('table');
-    body.appendChild(newTable);
-    var newThead = document.createElement('thead');
-    newTable.appendChild(newThead);
-    for (var i = 0; i < storehours.length; i++){
-     var tr = document.createElement('tr');
-     newThread.appendChild(tr);
-   }
-
-
-    // newHeading.innerText = this.name;
-    // var newTable = document.createElement('table');
-    // for (var i = 0; i < storeHours.length; i++) {
-    //   var newTR = document.createElement('tr');
-    //   newTable.appendChild(newTR);
-    }
-    body.appendChild(newTable);
-  };
+  },
+    this.createListItems = function(){
+      this.cookieSales();
+      var newHeading = document.createElement('h2');
+      body.appendChild(newHeading);
+      newHeading.innerText = this.name;
+      var newUL = document.createElement('ul');
+      for (var i = 0; i < storeHours.length; i++) {
+        var newLI = document.createElement('li');
+        newLI.innerText = storeHours[i] + ': ' + this.salesArray[i] + ' cookies';
+        newUL.appendChild(newLI);
+      }
+      body.appendChild(newUL);
+    };
 };
 
 var firsAndPike = new store('1st and Pike', 23, 65, 6.3);
@@ -56,6 +51,18 @@ sTac.createListItems();
 seattleCenter.createListItems();
 capHill.createListItems();
 alKi.createListItems();
+tHead();
+
+function tHead(){
+  var newThead = document.createElement('thead');
+  table.appendChild(newThead);
+  var newTr = document.createElement('tr');
+  newThead.appendChild(newTr);
+  for( i = 0; i < storeHours.length; i++) {
+    var newTh = document.createElement('th');
+    newTh.innerText = storeHours[i];
+  }
+}
 // var sTacAir = {
 //   minCust: 3,
 //   maxCust: 24,
