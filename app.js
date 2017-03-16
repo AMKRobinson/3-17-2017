@@ -13,17 +13,20 @@ var alKi = new Cookiestore('Alki', 2, 16, 4.6);
 var form = document.getElementById('the-form');
 function newStore(){
   event.preventDefault();
-  var name = event.target.name.value;
-  var minCust = event.target.minCust.value;
-  var maxCust = event.target.maxCust.value;
-  var avgCookie = event.target.avgCookie.value;
-  console.log(event.target.elements['name'].value);
-  console.log(event.target.elements['minCust'].value);
-  console.log(event.target.elements['maxCust'].value);
-  console.log(event.target.elements['avgCookie'].value);
-  var newStore = new Cookiestore(name, minCust, maxCust, avgCookie);
+  var name = event.target.name;
+  var minCust = event.target.minCust;
+  var maxCust = event.target.maxCust;
+  var avgCookie = event.target.avgCookie;
+
+  var newStore = new Cookiestore(name.value, minCust.value, maxCust.value, avgCookie.value);
+
   newStore.generateTableRow();
+  name.value = '';
+  minCust.value = '';
+  maxCust.value = '';
+  avgCookie.value = '';
 };
+
 form.addEventListener('submit', newStore);
 
 function Cookiestore(name, minCust, maxCust, avgCookie) {
