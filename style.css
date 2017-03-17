@@ -1,0 +1,52 @@
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #FFB9B0;
+}
+
+table{
+    background-color: #FAFFFC;
+    position: right, absolute;
+    border: 0;
+    background-color:;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+table td {
+    border: 1px solid #B2B2B2;
+}
+
+#addStore {
+  float: left;
+  margin: 3px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#nameinput {
+  width: 220px;
+}
+
+#mincustomer {
+  width: 148px;
+}
+
+#maxcustomer {
+  width: 145px;
+}
+
+#avgcookie {
+  width: 153px;
+}
+
+input {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: #B2B2B2;
+}
+
+tr {
+  border: 1px solid black;
+}
