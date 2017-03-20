@@ -2,6 +2,11 @@ ul {
   list-style-type: none;
 }
 
+#the-form {
+  margin: auto;
+  text-align: center;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #FFB9B0;
@@ -37,6 +42,27 @@ h1 {
   width: auto;
   height: auto;
   text-align: center;
+}
+
+#family {
+  height: 175px;
+}
+
+#cut {
+  height: 175px;
+}
+
+#fish {
+  border-radius: 75px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+#shirts {
+display: block;
+margin: auto;
+text-align: center;
 }
 
 #locations {
