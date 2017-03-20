@@ -3,6 +3,7 @@ ul {
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   background-color: #FFB9B0;
   margin: 2.5%;
 }
@@ -31,9 +32,28 @@ h1 {
   padding: 5px;
 }
 
-#body {
+#textbody {
+  margin-top: 25px;
   width: auto;
   height: auto;
+  text-align: center;
+}
+
+#locations {
+  text-align: center;
+  margin: auto;
+  margin-top: 75px;
+  width: 670px;
+}
+
+.location {
+  border-style: inset;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #D1D1D1;
+  float: left;
+  width: 150px;
+  margin: 5px;
 }
 
 #addStore {
